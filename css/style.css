@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    background-color: #000000
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+input, button, textarea{
+    border: none;
+    outline: none;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/********************Ini Navigasi*********/
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: -80px;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li a {
+    height: 40px;
+    line-height: 43px;
+    margin: 3px;
+    padding: 0 22px;
+    display: flex;
+    font-size: 0.73rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 99px;
+    transition: 0.3s ease-in-out;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+nav ul li a:hover {
+    background-color: #109c19;
+    color: #fff;
+    box-shadow: 5px 10px 30px rgb(6, 156, 21);
+}
+
+.active {
+    background-color: #109c19;
+    color: #fff;
+    box-shadow: 5px 10px 30px rgb(6, 156, 21);
+}
+
+.main {
+  width: 100%;
+  height: 800px;
+  background-image: url(../images/backgroundpic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding-top: 100px; 
+}
+.main-heading{
+    width: 500px;
+    position: absolute;
+    left: 16%;
+    top: 47%;
+    transform: translate(-16%,-47%);
+}
+.main-heading h1{
+    font-size: 45px;
+    margin: 0px;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+.main-heading p{
+    color: #ffffff;
+}
+.main-btn {
+	display: inline-flex; 
+	justify-content: center;
+	align-items: center;
+	padding: 12px 30px; 
+	min-width: 150px; 
+	box-sizing: border-box; 
+	background-color: #109c19;
+	color: #ffffff;
+	border: none; 
+	border-radius: 99px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	cursor: pointer; 
+	transition: all 0.3s ease-in-out;
+}
+
+.main-btn:hover{
+    box-shadow: 5px 10px 30px rgb(6, 156, 21);
+}
+
+/* -- Bagian Fitur -- */
+.features {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 0; 
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+
+.feature-box {
+    background-color: #000000;
+    width: 320px; 
+    margin: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ddb942; 
+    box-shadow: 0 10px 40px rgba(221, 185, 66, 0.1);
+    
+    
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px); 
+}
+
+.f-img {
+    width: 100%;
+    padding: 30px 20px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-img img {
+    width: 100%;
+    max-height: 120px; 
+    object-fit: contain; 
+}
+
+.f-text {
+    width: 100%;
+    padding: 0 30px 30px 30px; 
+    box-sizing: border-box;
+    text-align: center; 
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; 
+}
+
+.f-text h4 {
+    color: #ddb942; 
+    font-size: 1.3rem;
+    margin: 0 0 15px 0; 
+}
+
+.f-text p {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	margin: 0 0 25px 0; 
+}
+
+.f-text .main-btn {
+	display: inline-block;
+	background-color: #109c19;
+	color: #ffffff;
+	padding: 12px 35px;
+	border-radius: 99px; 
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: auto; 
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.f-text .main-btn:hover {
+    background-color: #14c522;
+    box-shadow: 0 5px 20px rgba(16, 156, 25, 0.4);
+}
+
+
+.about{
+    width: 100%;
+    height: 110vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5% 0px 5%;
+    position: relative;
+    outline-color: #ddb942;
+}
+.about-img{
+    width: 50%;
+}
+.about-img img{
+    width: 450px;
+    margin-left: 60px;
+    border-radius: 80px;
+}
+.about-text{
+    width: 45%;
+    color:#ffffff;
+    text-align: right;
+}
+.about-text h2{
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.about-text p{
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+.about-text button{
+    float: right;
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+}
+.contact-heading{
+    text-align: center;
+    margin: 40px 0px;
+    margin-bottom: 80px;
+    color: #ddb942;
+}
+.contact-heading h1{
+    font-size: 2.2rem;
+    color: #ddb942 ;
+}
+.contact form{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact form input,.contact form textarea{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px;
+    padding: 10px;
+    background-color: #e2e2e2;
+    color: #000000;
+    border-radius: 5px;
+}
+.contact form textarea{
+    height: 150px;
+}
+.contact-btn{
+    margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; 
+        margin-top: 0;
+        padding: 20px 0;
+        background-color: #080808; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        width: 100%;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        width: 90%;
+        justify-content: center; 
+    }
+    
+
+    .main {
+        height: 60vh; 
+        padding-top: 0;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-heading {
+        
+        position: static;
+        transform: none;
+        width: 90%; 
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .main-heading h1 {
+        font-size: 2rem; 
+    }
+
+    .main-heading p {
+        font-size: 0.9rem; 
+    }
+    
+    .about {
+        height: auto; 
+        flex-direction: column; 
+        padding: 50px 5%;
+        text-align: center; 
+    }
+
+    .about-img,
+    .about-text {
+        width: 100%; 
+        text-align: center;
+    }
+    
+    .about-img img{
+      width: 80%; 
+      max-width: 350px;
+      margin-left: 0; 
+    }
+
+    .about-text {
+        margin-top: 30px;
+    }
+    
+    .about-text h2{
+        font-size: 1.8rem;
+    }
+
+    .about-text button {
+        float: none; 
+    }
+    
+    .contact form {
+        width: 90%; 
+    }
+}

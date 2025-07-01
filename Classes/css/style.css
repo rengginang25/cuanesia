@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-image: url(../../images/inigambar.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0 22px;
+  display: flex;
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 99px;
+  transition: 0.3s ease-in-out;
+  color: #ffffff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #109c19;
+  color: #fff;
+  box-shadow: 5px 10px 30px rgb(6, 156, 21);
+}
+
+.features {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 2%;
+  color: #ffffff
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  
+}
+
+.feature-box {
+  background-color: #121212;
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ddb942;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(221, 185, 66, 0.15);
+}
+
+.f-img {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0;
+  background-color: #222;
+}
+
+.f-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.f-text-link {
+  display: flex;
+  flex-grow: 1;
+  color: inherit;
+}
+
+.f-text0 {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #000000;
+  transition: background-color 0.3s;
+}
+
+.f-text0-link:hover .f-text {
+  background-color: #1a1a1a;
+}
+
+.f-text0 h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.f-text {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddb942;
+  background-color: #000000;
+  transition: background-color 0.3s;
+}
+
+.f-text-link:hover .f-text {
+  background-color: #1a1a1a;
+}
+
+.f-text h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.section-title {
+  color: #ffffff;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.section-title2 {
+  color: #ddb942;
+  margin-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.section-subtitle {
+  color: #ddb942;
+  margin: 60px 0 30px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.pricing-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-images-container {
+    width: 100%;
+    max-width: 1200px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.pricing-image-item {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.main-bton {
+	display: inline-block;
+	background-color: #109c19;
+	color: #ffffff;
+	padding: 12px 35px;
+	border-radius: 99px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.main-bton:hover {
+    background-color: #14c522;
+    box-shadow: 0 5px 20px rgba(16, 156, 25, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .feature-box {
+    width: 90%;
+    max-width: 400px;
+  }
+}
