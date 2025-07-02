@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    // Simpan pesan notifikasi ke dalam session
+    $_SESSION['pesan_error'] = "Untuk memastikan kamu manusia, tolong login terlebih dahulu.";
+    
+    // Arahkan ke halaman login
+    header("Location: ../login.php");
+    exit(); 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +26,17 @@
         <img src="/images/logo.webp" alt="Logo">
       </a>
       <ul class="menu">
-        <li><a href="../index.php">Home</a></li>
-        <li><a href="../index.php#webinars">Webinars</a></li>
-        <li><a href="#" class="active">Classes</a></li>
-        <li><a href="../index.php#community">Community</a></li>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../index.php#webinars">Webinars</a></li>
+          <li><a href="#" class="active">Classes</a></li>
+          <li><a href="../index.php#community">Community</a></li>
+          
+          <?php
+          if (isset($_SESSION['user_id'])) {
+              echo '<li><span style="color: #ddb942; padding: 0 15px; line-height: 43px;">Halo, ' . htmlspecialchars($_SESSION['username']) . '</span></li>';
+              echo '<li><a href="../logout.php">Logout</a></li>';
+          }
+          ?>
       </ul>
     </nav>
   </header>

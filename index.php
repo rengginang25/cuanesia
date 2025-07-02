@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +15,19 @@
                 <img src="images/logo.webp">
 
             </a>
-            <ul class = "menu">
-                <li><a href="#"class="active">Home</a></li>
+            <ul class="menu">
+                <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="#webinars">Webinars</a></li>
                 <li><a href="Classes/">Classes</a></li>
                 <li><a href="#community">Community</a></li>
+    
+                <?php
+                if (isset($_SESSION['user_id'])) {
+                    echo '<li><a href="logout.php">Logout</a></li>';
+                } else {
+                    echo '<li><a href="login.php">Login</a></li>';
+                }
+                ?>
             </ul>
         </nav>
         <div class="main-heading">
@@ -93,9 +103,9 @@
             <p>Kami Tunggu Perjalanan Indah Anda bersama Cuanesia</p>
         </div>
         <form action="userinformation.php" method="post">
-            <input type="text" name="user" placeholder="Nama Panjang Kamu..."/>
-            <input type="email" name="email" placeholder="Gmail Kamu..."/>
-            <textarea name="message" placeholder="Alasan Kamu Tertarik untuk Bergabung..."></textarea>
+            <input type="text" name="user" placeholder="Nama Panjang Kamu..." required />
+            <input type="email" name="email" placeholder="Gmail Kamu..." required />
+            <textarea name="message" placeholder="Alasan Kamu Tertarik untuk Bergabung..." required></textarea>
             <button class="main-btn contact-btn" type="submit">Continue</button>
         </form>
     </footer>
